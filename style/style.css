@@ -534,7 +534,7 @@ h2.title {
   flex-basis: calc((100% - 90px)/4);
 }
 
-.footer .title-icon {
+.footer .title-footer {
   margin-bottom: 20px;
 
   font-weight: 700;
