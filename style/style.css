@@ -66,7 +66,6 @@ h2.title {
 
 /* Header */
 
-
 .logo {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -565,6 +564,62 @@ h2.title {
 .footer-icons-group .social:hover {
   background-color: var(--accent-color)
 }
+
+.footer-form {
+  position: relative;
+  display: flex;
+}
+
+.footer-form input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: rgba(33, 150, 243, 0);
+}
+
+.footer-form label {
+  position: absolute;
+  left: 16px;
+  bottom: 15px;
+}
+
+
+.btn-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  color: var(--whity-color);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  background-color: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.btn-footer:active,
+.btn-footer:hover,
+.btn-footer:focus {
+  background-color: var(--active-button);
+}
+
+.btn-footer-icon {
+  margin-left: 10px;
+}
+
 
 /* Portfolio */
 
