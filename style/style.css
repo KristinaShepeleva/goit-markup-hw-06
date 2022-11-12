@@ -901,10 +901,10 @@ text-decoration: none;
   position: relative;
   display: flex;
   align-items: center;
-}
-
-.form-checkbox {
+  justify-content: center;
+  gap: 7px;
   margin-bottom: 30px;
+
 }
 
 .form-check {
@@ -917,11 +917,11 @@ text-decoration: none;
 }
 
 .chek-label {
-  padding-left: 36px;
+  
   font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 .check-link {
