@@ -577,13 +577,16 @@ h2.title {
     padding: 15px 16px;
     margin-right: 12px;
     color: var(--whity-color);
+    outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: rgba(33, 150, 243, 0);
 }
 
-
+.footer-input:focus-within {
+  border: 1px solid var(--accent-color);
+}
 
 .btn-footer {
   display: flex;
@@ -616,10 +619,6 @@ h2.title {
 .btn-footer-icon {
   margin-left: 10px;
 }
-
-
-
-
 
 
 /* Portfolio */
@@ -834,6 +833,10 @@ text-decoration: none;
   margin-bottom: 10px;
 }
 
+.form:last-child {
+  margin-bottom: 0;
+}
+
 .form-input {
   padding-left: 42px;
   width: 100%;
@@ -876,15 +879,14 @@ text-decoration: none;
   resize: none;
   padding: 12px 16px 12px 16px;
   width: 100%;
-  margin-bottom: 20px;
+  
+  outline: none;
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-
-
-.form-comment:not(:placeholder-shown):invalid {
+.form-comment:focus-within {
   border: 1px solid #2196F3;
 }
 
@@ -896,6 +898,12 @@ text-decoration: none;
 }
 
 .form-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox {
   margin-bottom: 30px;
 }
 
@@ -903,6 +911,23 @@ text-decoration: none;
   appearance: none;
 }
 
+.check-icon {
+  position: absolute;
+  left: 13px;
+}
+
+.chek-label {
+  padding-left: 36px;
+  font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+.check-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
 
 .modal .button {
   width: 200px;

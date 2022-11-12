@@ -457,11 +457,15 @@
 
               <div class="form">
                 <label for="textarea" class="form-label">Коментар</label>
-                <textarea name="user-text" id="textarea" rows="6" placeholder="Введіть текст" class="form-comment"></textarea>
+                <textarea class="form-comment" name="user-text" id="textarea" rows="6" placeholder="Введіть текст" ></textarea>
               </div>
 
               <div class="form-checkbox">
-                <label><input class="form-check" type="checkbox" name="feedback" value="" checked /> Погоджуюся з розсилкою та приймаю <a href=""> Умови договору </a></label>
+                <label class="chek-label"> Погоджуюся з розсилкою та приймаю <a class="check-link" href=""> Умови договору </a></label>
+                <input class="form-check" type="checkbox" name="feedback" value="" checked />
+                <svg class="check-icon" width="16" height="15">
+                  <use href="./image/symbol-defs.svg#icon-icon-check"></use>
+                </svg>
               </div>
 
               <button class="button" type="submit">Відправити</button>
