@@ -236,6 +236,7 @@ h2.title {
   height: 50px;
   border-radius: 4px;
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition-property: background-color, box-shadow;
   transition-duration: var(--duration);
@@ -570,7 +571,7 @@ h2.title {
   display: flex;
 }
 
-.footer-form input {
+.footer-input {
     width: 358px;
     height: 50px;
     padding: 15px 16px;
@@ -615,6 +616,11 @@ h2.title {
 .btn-footer-icon {
   margin-left: 10px;
 }
+
+
+
+
+
 
 /* Portfolio */
 
@@ -812,14 +818,6 @@ text-decoration: none;
   transition: color var(--duration) var(--transition-timing-function)
 }
 
-.icon-close {
-  fill: currentColor;
-}
-
-.close-btn:hover {
-  color: var(--accent-color);
-}
-
 .modal-title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -833,40 +831,48 @@ text-decoration: none;
 .form {
   position: relative;
   display: block;
-  
+  margin-bottom: 10px;
 }
 
-.form input {
+.form-input {
   padding-left: 42px;
-  margin-bottom: 10px;
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border var(--duration) var(--transition-timing-function);
 }
 
-.placeholder {
-   margin-left: 42px;
+.form-input:focus-within {
+  border: 1px solid #2196F3;  
 }
 
-.form label {
-  display: block;
+.form .form-label {
   margin-bottom: 4px;
-
+  
   font-size: 12px;
   line-height: 1.666;
   letter-spacing: 0.01em;
-  color-scheme: var(--icon-color);
+  color: var(--icon-color);
 }
 
-.modal-icon {
+.form-icon {
   position: absolute;
+  bottom: 11px;
   left: 12px;
-  bottom: 21px;
+  
   fill: var(--titly-text-color);
+
+  transition: fill var(--duration) var(--transition-timing-function);
 }
 
-.form textarea {
+.form-input:focus-within ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-comment {
   resize: none;
   padding: 12px 16px 12px 16px;
   width: 100%;
@@ -876,14 +882,30 @@ text-decoration: none;
   border-radius: 4px;
 }
 
-.placeholder {
+
+
+.form-comment:not(:placeholder-shown):invalid {
+  border: 1px solid #2196F3;
+}
+
+.form-comment::placeholder {
   font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.01em;
-  
-    color: rgba(117, 117, 117, 0.5);
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-checkbox {
   margin-bottom: 30px;
 }
+
+.form-check {
+  appearance: none;
+}
+
+
+.modal .button {
+  width: 200px;
+}
+
+
