@@ -820,6 +820,14 @@ text-decoration: none;
   transition: color var(--duration) var(--transition-timing-function)
 }
 
+.icon-close {
+  fill: currentColor;
+}
+
+.close-btn:hover, .close-btn:focus {
+  color: var(--accent-color);
+}
+
 .modal-title {
   margin-bottom: 12px;
   font-weight: 700;
